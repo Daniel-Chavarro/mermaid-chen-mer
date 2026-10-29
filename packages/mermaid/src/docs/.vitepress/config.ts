@@ -172,6 +172,10 @@ function sidebarSyntax() {
           text: 'Entity Relationship Diagram',
           link: '/syntax/entityRelationshipDiagram',
         },
+        {
+          text: 'Chen ER Diagram 🦺⚠️',
+          link: '/syntax/chen',
+        },
         { text: 'User Journey', link: '/syntax/userJourney' },
         { text: 'Gantt', link: '/syntax/gantt' },
         { text: 'Pie Chart', link: '/syntax/pie' },
