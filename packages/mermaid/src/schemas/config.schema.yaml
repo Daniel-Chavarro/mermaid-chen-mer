@@ -59,6 +59,7 @@ required:
   - eventmodeling
   - radar
   - usecase
+  - chen
   - venn
 properties:
   theme:
@@ -444,6 +445,8 @@ properties:
     $ref: '#/$defs/RadarDiagramConfig'
   usecase:
     $ref: '#/$defs/UsecaseDiagramConfig'
+  chen:
+    $ref: '#/$defs/ChenDiagramConfig'
   venn:
     $ref: '#/$defs/VennDiagramConfig'
   wardley-beta:
@@ -2952,6 +2955,40 @@ $defs: # JSON Schema definition (maybe we should move these to a separate file)
         minimum: 0
         maximum: 1
         default: 0.17
+
+  ChenDiagramConfig:
+    title: Chen Diagram Config
+    allOf: [{ $ref: '#/$defs/BaseDiagramConfig' }]
+    description: The object containing configurations specific for Chen entity-relationship diagrams.
+    type: object
+    unevaluatedProperties: false
+    required:
+      - useMaxWidth
+      - titleTopMargin
+      - diagramPadding
+      - nodeSpacing
+      - rankSpacing
+    properties:
+      titleTopMargin:
+        $ref: '#/$defs/GitGraphDiagramConfig/properties/titleTopMargin'
+        default: 25
+      diagramPadding:
+        description: |
+          The amount of padding around the diagram as a whole so that embedded
+          diagrams have margins, expressed in pixels.
+        type: integer
+        default: 20
+        minimum: 0
+      nodeSpacing:
+        description: Horizontal distance between neighbouring nodes, expressed in pixels.
+        type: integer
+        default: 60
+        minimum: 0
+      rankSpacing:
+        description: Distance between consecutive ranks of the layout, expressed in pixels.
+        type: integer
+        default: 60
+        minimum: 0
 
   UsecaseDiagramConfig:
     title: Usecase Diagram Config

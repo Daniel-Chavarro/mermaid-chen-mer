@@ -357,6 +357,7 @@ export interface MermaidConfig {
   treeView?: TreeViewDiagramConfig;
   radar?: RadarDiagramConfig;
   usecase?: UsecaseDiagramConfig;
+  chen?: ChenDiagramConfig;
   venn?: VennDiagramConfig;
   'wardley-beta'?: WardleyDiagramConfig;
   cynefin?: CynefinDiagramConfig;
@@ -2473,6 +2474,32 @@ export interface UsecaseDiagramConfig extends BaseDiagramConfig {
    *
    */
   colorScheme?: 'role' | 'rotate';
+}
+/**
+ * The object containing configurations specific for Chen entity-relationship diagrams.
+ *
+ * This interface was referenced by `MermaidConfig`'s JSON-Schema
+ * via the `definition` "ChenDiagramConfig".
+ */
+export interface ChenDiagramConfig extends BaseDiagramConfig {
+  /**
+   * Margin top for the text over the diagram
+   */
+  titleTopMargin?: number;
+  /**
+   * The amount of padding around the diagram as a whole so that embedded
+   * diagrams have margins, expressed in pixels.
+   *
+   */
+  diagramPadding?: number;
+  /**
+   * Horizontal distance between neighbouring nodes, expressed in pixels.
+   */
+  nodeSpacing?: number;
+  /**
+   * Distance between consecutive ranks of the layout, expressed in pixels.
+   */
+  rankSpacing?: number;
 }
 /**
  * The object containing configurations specific for Venn diagrams.

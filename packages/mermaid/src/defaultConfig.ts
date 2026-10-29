@@ -295,6 +295,9 @@ const config: RequiredDeep<MermaidConfig> = {
   usecase: {
     ...defaultConfigJson.usecase,
   },
+  chen: {
+    ...defaultConfigJson.chen,
+  },
   railroad: {
     ...defaultConfigJson.railroad,
     // Railroad colors and typography derive from the active theme unless explicitly overridden.

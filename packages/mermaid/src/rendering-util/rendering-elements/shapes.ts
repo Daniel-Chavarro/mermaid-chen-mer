@@ -2,6 +2,14 @@ import type { Entries } from 'type-fest';
 import type { D3Selection, MaybePromise } from '../../types.js';
 import type { Node, ShapeRenderOptions } from '../types.js';
 import { anchor } from './shapes/anchor.js';
+import {
+  chenAttribute,
+  chenDiamond,
+  chenDoubleDiamond,
+  chenEntity,
+  chenIsa,
+  chenWeakEntity,
+} from './shapes/chenShapes.js';
 import { bowTieRect } from './shapes/bowTieRect.js';
 import { bucket } from './shapes/bucket.js';
 import { collapsedGroup } from './shapes/collapsedGroup.js';
@@ -590,6 +598,14 @@ const generateShapeMap = () => {
     usecaseBusiness,
     usecaseEllipse,
     usecaseJsonTable,
+
+    // Chen ER diagram
+    chenEntity,
+    chenWeakEntity,
+    chenDiamond,
+    chenDoubleDiamond,
+    chenIsa,
+    chenAttribute,
 
     'bpmn-start': bpmnStart,
     'bpmn-intermediate': bpmnIntermediate,
